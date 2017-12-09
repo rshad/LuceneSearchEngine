@@ -1,0 +1,24 @@
+Problem's Category : Application Server Installation
+    Server Type : Tomcat
+    Problem Context : After installing the Tomcat directory in a system's directory like /opt i got problems of permissi-
+                      ons, so i recommend install the Tomcat's directory in the user's home directory.
+
+                      You can get the Tomcat 9 Directory from its official site :
+                         https://tomcat.apache.org/download-90.cgi
+
+                      You can follow the steps in the following web site :
+                        https://tecadmin.net/install-tomcat-9-on-ubuntu/
+
+                      Give the permission for Intellij to access and copy Catalina.sh :
+                        chmod 777 .../tomcat9/bin/Catalina.sh
+
+                      Try to start tomcat9 Server :
+                        chmod +x .../tomcat9/bin/startup.sh
+                        cd .../tomcat9/bin/ -> ./startup.sh
+
+                      If it works, turn it off, to make its port available for intellij, normally it's 8080
+                           chmod +x .../tomcat9/bin/shutdown.sh
+                           cd .../tomcat9/bin/ -> ./shutdown.sh
+
+                      Define the Tomcat Application Server for your project in Intellij.
+                           Run the server. Now you JSP file should be executed and viewed in the browser at localhost:8080

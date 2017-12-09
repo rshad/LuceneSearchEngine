@@ -1,0 +1,11 @@
+First of all, i added the Lucene 7.0.1 and Tika_App_Lib to lib directory. We gonna need their functionality in our App.
+
+Then, I created the lasses :
+    I_Recovery.DocParser : Used to extract and filter the information from the html files, using JSOUP library
+    I_Recovery.IndexCreator : Used to create our index or add new files to existing index.
+    I_Recovery.LuceneDocCreator : Used to create Lucene Document which will be used by our index.
+    I_Recovery.Main : The main class to test our app.
+
+To start, we have to parser our  html files, so i gonna implement the I_Recovery.DocParser class first.
+
+
