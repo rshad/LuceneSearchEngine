@@ -6,7 +6,159 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3e81000-85fb-4e98-a1d4-58d39bf2a830" name="Default" comment="" />
+    <list default="true" id="c3e81000-85fb-4e98-a1d4-58d39bf2a830" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Index/_s.cfe" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Index/_s.cfs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Index/_s.si" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Index/segments_t" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/facets/_1k.cfe" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/facets/_1k.cfs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/facets/_1k.si" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/facets/_1l.fdt" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/accesibilidad.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/acceso-a-la-universidad.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/alojamiento/colegios-mayores.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/alojamiento/granada.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/alojamiento/residencias-universitarias.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/alojamiento/servicio-de-alojamiento.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/becas-y-ayudas/becas-de-investigacion.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/becas-y-ayudas/becas-de-movilidad-nacional-e-internacional.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/becas-y-ayudas/becas-estudiantes-grado.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/becas-y-ayudas/becas-para-titulados.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/correo-electronico.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/cursos-verano-ceuta-melilla.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduado-administracion-y-direccion-empresas-y-dcho-melilla.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduado-en-administracion-y-direccion-de-empresas-melilla.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-cc-activ-fisica-y-deporte-melilla.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-edprima-y-cc-act-fisica-melilla.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-administracion-y-direccion-de-empresas-ceuta.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-administracion-y-direccion-de-empresas-derecho.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-administracion-y-direccion-de-empresas.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-antropologia-social-y-cultural.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-arqueologia.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-arquitectura.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-bellas-artes.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-biologia.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-bioquimica.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-biotecnologia.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-ciencia-y-tecnologia-de-los-alimentos.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-ciencias-ambientales.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-ciencias-de-la-actividad-fisica-y-del-deporte.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-ciencias-politicas-y-de-la-administ-y-derecho.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-ciencias-politicas-y-de-la-administracion.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-comunicacion-audiovisual.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-conservacion-y-restauracion-de-bienes-cultural.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-criminologia.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-derecho.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-economia.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-edificacion-administ-y-direcc-empresas.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-edificacion.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-educacion-infantil-ceuta.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-educacion-infantil-melilla.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-educacion-infantil.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-educacion-primaria-ceuta.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-educacion-primaria-melilla.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-educacion-primaria-y-estudios-franceses.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-educacion-primaria-y-estudios-ingleses.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-educacion-primaria.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-educacion-social-ceuta.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-educacion-social-melilla.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-educacion-social.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-enfermeria-ceuta.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-enfermeria-melilla.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-enfermeria.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-estadistica.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-farmacia.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-filosofia.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-finanzas-y-contabilidad.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-fisica.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-fisioterapia-melilla.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-fisioterapia.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-geografia-y-gestion-del-territorio.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-geologia.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-gestion-y-administracion-publica-melilla.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-historia-del-arte.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-historia-y-ciencias-de-la-musica.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-historia.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-informacion-y-documentacion.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-inga-informatica-administ-y-direcc-empresas.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-ingenieria-civil-administrdirecc-de-empresas.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-ingenieria-civil.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-ingenieria-de-tecnologias-de-telecomunicacion.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-ingenieria-electronica-industrial.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-ingenieria-informatica-ceuta.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-ingenieria-informatica-y-matematicas.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-ingenieria-quimica.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-logopedia.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-marketing-e-investigacion-de-mercados.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-matematicas-y-fisica.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-matematicas.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-medicina.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-nutrichnay-dietet-ciencia-tecnol-alimentos.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-nutricion-humana-y-dietetica.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-odontologia.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-optica-y-optometria.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-pedagogia.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-psicologia.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-quimica.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-relaciones-laborales-y-recursos-humanos-mel.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-relaciones-laborales-y-recursos-humanos.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-sociologia.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-terapia-ocupacional.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-trabajo-social.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-traduccion-e-interpretacion-turismo.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/grados/graduadoa-en-turismo.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/master-doctorados.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/movilidad-e-intercambio/SICUE.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/movilidad-e-intercambio/movilidad-internacional.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/practicas.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/prado.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/estudiantes/que-estudiar.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/modules/contrib/eu_cookie_compliance/images/gradient.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/sites/default/files/css/css_HEU5qX7SgIu9H7KCX7e08_VTEt6NaK2tHQSYNNh5XWI57b8.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/sites/default/files/css/css_eL5b10VLekcoOWyHf_2EZ7TuiLoa9aI2b_FSXLqNguM57b8.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/sites/default/files/css/css_kwM2iOiLB9wEgFSt44SWxeu_wAWRbbsehdeQ5RYhmd457b8.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/sites/default/files/css/css_us9pdXzych5vuDxt8E8X_dBJiZe9CR-BLcWlDf9TLlQ57b8.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/sites/default/files/image-block/HR_01.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/sites/default/files/image-block/ugr-marca-vertical-negativo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/sites/default/files/image-block/universia@2x.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/sites/default/files/inline-images/estudiantes-grados.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/sites/default/files/inline-images/residencia-universitaria-carlos-v.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/sites/default/files/inline-images/residencia-universitaria-carmen-mendez.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/sites/default/files/inline-images/residencia-universitaria-carmen-salles.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/sites/default/files/inline-images/residencia-universitaria-fernando-de-los-rios.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/sites/default/files/inline-images/residencia-universitaria-hijas-de-castrorey.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/sites/default/files/js/js_BKcMdIbOMdbTdLn9dkUq3KCJfIKKo2SvKoQ1AnB8D-g.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/sites/default/files/js/js_JdtG5cBHKS3Y8VrhTG1q0okxiglIXFPKQTFi8xr8SM4.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/sites/default/files/js/js_PZqSuqEZV5-fEvweMDS72WJLaZqd5s_5m1oRZBEBe_M.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/sites/default/files/js/js_jnU4vwoCXoH5qlPMrQ1vueGLKrEN2e7A-msJdm8r9A4.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/sites/default/files/ugr-marca-horizontal-color@3x.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/themes/custom/ugr/images/ic-enter.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/themes/custom/ugr/images/ic-media.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Documents/www.ugr.es/themes/custom/ugr/images/ic-search.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Index/_m.cfe" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Index/_m.cfs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Index/_m.si" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Index/segments_n" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Problems_Solutions and References/Problems and Soluctions" afterPath="$PROJECT_DIR$/Problems_Solutions and References/Problems and Soluctions" />
+      <change beforePath="$PROJECT_DIR$/facets/_18.cfe" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/facets/_18.cfs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/facets/_18.si" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/facets/_19.fdt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/facets/_19.fdx" afterPath="$PROJECT_DIR$/facets/_1l.fdx" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/_RI__war_exploded/WEB-INF/classes/I_Recovery/ContentSearch.class" afterPath="$PROJECT_DIR$/out/artifacts/_RI__war_exploded/WEB-INF/classes/I_Recovery/ContentSearch.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/_RI__war_exploded/WEB-INF/classes/I_Recovery/IndexCreator.class" afterPath="$PROJECT_DIR$/out/artifacts/_RI__war_exploded/WEB-INF/classes/I_Recovery/IndexCreator.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/_RI__war_exploded/WEB-INF/classes/I_Recovery/Main.class" afterPath="$PROJECT_DIR$/out/artifacts/_RI__war_exploded/WEB-INF/classes/I_Recovery/Main.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/_RI__war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/_RI__war_exploded/index.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/production/_RI_/I_Recovery/ContentSearch.class" afterPath="$PROJECT_DIR$/out/production/_RI_/I_Recovery/ContentSearch.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/_RI_/I_Recovery/IndexCreator.class" afterPath="$PROJECT_DIR$/out/production/_RI_/I_Recovery/IndexCreator.class" />
+      <change beforePath="$PROJECT_DIR$/src/I_Recovery/ContentSearch.java" afterPath="$PROJECT_DIR$/src/I_Recovery/ContentSearch.java" />
+      <change beforePath="$PROJECT_DIR$/src/I_Recovery/IndexCreator.java" afterPath="$PROJECT_DIR$/src/I_Recovery/IndexCreator.java" />
+      <change beforePath="$PROJECT_DIR$/src/I_Recovery/Main.java" afterPath="$PROJECT_DIR$/src/I_Recovery/Main.java" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,34 +169,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/I_Recovery/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ContentSearch.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/I_Recovery/ContentSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="226">
+              <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
               <folding>
+                <element signature="e#0#3961#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DocParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/I_Recovery/DocParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -52,31 +185,39 @@
       <file leaf-file-name="IndexCreator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/I_Recovery/IndexCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="2760">
+              <caret line="166" column="39" lean-forward="false" selection-start-line="166" selection-start-column="39" selection-end-line="166" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QueryClass.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/I_Recovery/QueryClass.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/I_Recovery/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding>
-                <element signature="e#185#186#0" expanded="true" />
-                <element signature="e#212#213#0" expanded="true" />
-                <element signature="e#265#266#0" expanded="true" />
-                <element signature="e#293#294#0" expanded="true" />
-                <element signature="e#336#337#0" expanded="true" />
-                <element signature="e#360#361#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Problems and Soluctions" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Problems_Solutions and References/Problems and Soluctions">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="331">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Title</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,9 +230,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/src/I_Recovery/Main.java" />
         <option value="$PROJECT_DIR$/src/I_Recovery/QueryClass.java" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/Problems_Solutions and References/Problems and Soluctions" />
+        <option value="$PROJECT_DIR$/src/I_Recovery/Main.java" />
+        <option value="$PROJECT_DIR$/src/I_Recovery/IndexCreator.java" />
         <option value="$PROJECT_DIR$/src/I_Recovery/ContentSearch.java" />
       </list>
     </option>
@@ -131,15 +274,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="_RI_" type="b2602c69:ProjectViewProjectNode" />
               <item name="_RI_" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_RI_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="_RI_" type="462c0819:PsiDirectoryNode" />
+              <item name="Problems_Solutions and References" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_RI_" type="b2602c69:ProjectViewProjectNode" />
@@ -152,11 +299,17 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="I_Recovery" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="_RI_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="_RI_" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -375,47 +528,51 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1512837039612</updated>
-      <workItem from="1512837042114" duration="11601000" />
+      <workItem from="1512837042114" duration="21126000" />
+      <workItem from="1512864583294" duration="477000" />
+      <workItem from="1512902263830" duration="2992000" />
+      <workItem from="1512996846484" duration="14567000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11601000" />
+    <option name="totallyTimeSpent" value="39162000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="37" y="-4" width="1329" height="772" extended-state="6" />
+    <frame x="-15" y="62" width="1331" height="780" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2822823" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19789316" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2822823" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23250565" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,33 +586,31 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/I_Recovery/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        <state relative-caret-position="180">
+          <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/I_Recovery/QueryClass.java">
+    <entry file="file://$PROJECT_DIR$/src/I_Recovery/ContentSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="1140">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#0#3961#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/I_Recovery/IndexCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1580">
+          <caret line="104" column="53" lean-forward="false" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -468,10 +623,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/I_Recovery/IndexCreator.java">
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="160">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -480,7 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
           <caret line="86" column="16" lean-forward="false" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -488,15 +642,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
           <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/I_Recovery/QueryClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/I_Recovery/DocParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems_Solutions and References/Problems and Soluctions">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/I_Recovery/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/I_Recovery/IndexCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2760">
+          <caret line="166" column="39" lean-forward="false" selection-start-line="166" selection-start-column="39" selection-end-line="166" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/I_Recovery/ContentSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        <state relative-caret-position="226">
+          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding>
+            <element signature="e#0#3961#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>

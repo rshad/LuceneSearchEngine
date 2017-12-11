@@ -1,59 +1,96 @@
+/*
+* @autor Rshad Zhran
+* Subject : Inormation Recovery, 2017-2018
+* */
+
+
 package I_Recovery;
 
 import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
 import org.apache.lucene.analysis.es.SpanishAnalyzer;
-import org.apache.lucene.index.DirectoryReader;
-import org.apache.lucene.index.FieldInvertState;
-import org.apache.lucene.index.IndexReader;
-import org.apache.lucene.index.LeafReaderContext;
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.index.*;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.queryparser.classic.QueryParser;
-import org.apache.lucene.search.CollectionStatistics;
-import org.apache.lucene.search.IndexSearcher;
-import org.apache.lucene.search.Query;
-import org.apache.lucene.search.TermStatistics;
+import org.apache.lucene.search.*;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.search.similarities.Similarity;
-import org.apache.lucene.search.TopDocs;
-import org.apache.lucene.search.ScoreDoc;
 
 
 import javax.swing.text.Document;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.HashMap;
 
+/*
+ * Search UI Design :
+ *   Option 1 -> [ Query Box ] -> Without specifying the search's field
+ *   --------------------------------------------------------
+ *   Option 2 -> [Choose Field "Filter"] [Query Box] -> Have to specify the search's field
+ *
+ */
+
+/**
+ * {@link ContentSearch} class, is responsible about the search function in our system
+ * */
 public class ContentSearch {
-    private Directory dir; // store the index directory
-    private IndexReader idx_Reader; // used to read the index
+
+    /* Class's members's definition */
+    private Directory dir;              // store the index directory
+    private IndexReader idx_Reader;     // used to read the index
     private IndexSearcher idx_Searcher; // Once we got the index opened for lecture, we can create our IndexSearcher object
 
-    public ContentSearch(String Index_Dir_Path) throws IOException, ParseException {
+    /* Data Structures's Section Start  */
+    private ArrayList<Integer> ResultDocsID = new ArrayList<>();   // ResultDocsID will return the resulted documents's IDs
+    private HashMap<String,String > Field_Query = new HashMap<>(); // In case of determining the term or field of for the ...
+    /* Data Structures's Section End */                            // ... we store it in Field_Query.
+
+    /* Related variables to Lucene search Start */
+    private QueryParser qParser; // Gonna be used in general non-field queries.
+    private Query q1;
+    private TopDocs docs; // The resulted docs of a query search
+    private Integer ShownDocs = 10; // The number of doc.s to be view to the user
+    /* Related variables to Lucene search End */
+
+
+
+
+    /**
+      * Constructor
+      * @param  Index_Dir_Path the index directory
+      */
+    public ContentSearch(String Index_Dir_Path) throws IOException {
         dir = FSDirectory.open(Paths.get(Index_Dir_Path)); // Created directory by the index directory path
-        idx_Reader = DirectoryReader.open(dir); // Open the index directory for lecture
-        idx_Searcher = new IndexSearcher(idx_Reader); // created the IndexSearcher  object
-        //Similarity example__;
-        //example__ = idx_Searcher.getSimilarity(true);
-        //System.out.println(example__.getClass());
-        //org.apache.lucene.document.Document ex = idx_Searcher.doc(1);
-        //System.out.println(ex.toString());
-
-        // Setting Content as the default field to search into.
-        QueryParser parser = new QueryParser("Content", new SpanishAnalyzer());
-        Query q1,q2,q3;
-
-        /*
-            Normal Query Which gonna search in the the query in the default field, in this case -> Content
-            In this simple case
-        */
-        q1 = parser.parse("Servicios Universidad Alojamiento");
-        TopDocs docs = idx_Searcher.search(q1,10);
-        for(ScoreDoc sd : docs.scoreDocs){
-            org.apache.lucene.document.Document d = idx_Searcher.doc(sd.doc);
-            System.out.println(sd.score +" Documento : "+ d.get("Title"));
-        }
-
+        idx_Reader = DirectoryReader.open(dir);            // Open the index directory for lecture
+        idx_Searcher = new IndexSearcher(idx_Reader);      // created the IndexSearcher object
+        qParser = new QueryParser("Content",new SpanishAnalyzer()); // Content represents the default field ...
+                                                                       // ... SpanishAnalyzer the default Analyzer
     }
 
+    /**
+     * GeneralSearchQuery throws a search query on each field of our index
+     * @param Query represents the query body or text.
+     */
+    public void GeneralSearchQuery(String Query) throws ParseException, IOException {
+
+        // Normal Query Which gonna search in the the query in the default field, in this case -> Content In this simple case
+        q1 = qParser.parse("Content:"+Query+" OR Title:"+Query); // Warning : Query can't be null or empty string
+        docs = idx_Searcher.search(q1,ShownDocs); // Search query and show ShownDocs documents.
+
+        for(ScoreDoc sd : docs.scoreDocs){ //Getting the resulted documents
+            org.apache.lucene.document.Document d = idx_Searcher.doc(sd.doc);
+            System.out.println(sd.score +" Document : "+ d.get("Title"));
+        }
+    }
+
+    /**
+      * SpecifiedSearchQuery receive a String, which represents the query text, to be searched.
+      * @param QueryBody The query text
+      */
+    public void SpecifiedSearchQuery(String QueryBody, HashMap<String,String> Field_Query , String Category){
+
+    }
 
 }

@@ -103,8 +103,7 @@ public class IndexCreator {
         analyzerPerField.put("Path", new WhitespaceAnalyzer());   // WhiteSpaceAnalyzer to not divide the path, so the path doesn't have white spaces
         analyzerPerField.put("Email", new WhitespaceAnalyzer());  // The same case as Path
         analyzerPerField.put("FileName", new StandardAnalyzer());
-        analyzerPerField.put("Title", new StandardAnalyzer());
-        analyzerPerField.put("Length", new StandardAnalyzer());
+        analyzerPerField.put("Title", new SpanishAnalyzer(SpanishAnalyzer.getDefaultStopSet()));
 
         //The multi-analyzer set which contains all the previous analyzerPerField's elements
         PerFieldAnalyzerWrapper analyzer = new PerFieldAnalyzerWrapper(
@@ -136,22 +135,21 @@ public class IndexCreator {
             try {
                 doc = new Document();
 
-                /*
-                 *  Adding the fields to the index document
-                 */
+
+                // Adding the fields to the index document
                 doc.add(new TextField("Content", (FileFields).get_DocText() , Field.Store.YES ));
                 doc.add(new StringField("Path", f.getCanonicalPath().substring(46), Field.Store.YES)); //substring(46) -> to remove the local path
-                doc.add(new StringField("FileName", f.getName(), Field.Store.YES));
-                doc.add(new StringField("Title",(FileFields).get_DocTitle(), Field.Store.YES));
+                doc.add(new TextField("FileName", f.getName(), Field.Store.YES));
+                doc.add(new TextField("Title",(FileFields).get_DocTitle(), Field.Store.YES));
 
                 for(String email : (FileFields).get_DocEmails()){
                     doc.add(new StringField("Email" , email, Field.Store.YES));
                 }
-
+            /*
                 IntPoint length_field = new IntPoint("Length",(FileFields).get_DocLength());
                 length_field.setIntValue(32);
                 doc.add(length_field);
-
+            */
 
                                                     /* The Facets Section */
 
