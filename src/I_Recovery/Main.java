@@ -22,7 +22,7 @@ public class Main {
        // example.createIndex("/home/rshad/MyFiles/RI/Documents");//( new File(".").getCanonicalPath() ) + "/" + "Documents");
 
         ContentSearch SearchEngine = new ContentSearch(IndexDirPath);
-        SearchEngine.GeneralSearchQuery("University of Granada");
+        SearchEngine.GeneralSearchQuery("defensor@ugr.es");
 
 
     }

@@ -5,6 +5,20 @@
       <element id="javaee-facet-resources" facet="_RI_/javaeeApplication/javaEEApplication" />
       <element id="directory" name="web.war">
         <element id="artifact" artifact-name="_RI_:war exploded" />
+        <element id="module-output" name="_RI_" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/lucene_7.1.0/queries/lucene-queries-7.1.0.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/lucene_7.1.0/queryparser/lucene-queryparser-7.1.0.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/lucene_7.1.0/facet/lucene-facet-7.1.0.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/lucene_7.1.0/core/lucene-core-7.1.0.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/lucene_7.1.0/classification/lucene-classification-7.1.0.jar" />
+      </element>
+      <element id="directory" name="lib">
+        <element id="file-copy" path="$PROJECT_DIR$/lib/JSOUP/jsoup-1.6.0.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/lucene_7.1.0/analysis/common/lucene-analyzers-common-7.1.0.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/lucene_7.1.0/core/lucene-core-7.1.0.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/lucene_7.1.0/facet/lucene-facet-7.1.0.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/lucene_7.1.0/queryparser/lucene-queryparser-7.1.0.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/lucene_7.1.0/queries/lucene-queries-7.1.0.jar" />
       </element>
     </root>
   </artifact>

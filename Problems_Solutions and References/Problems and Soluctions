@@ -22,3 +22,14 @@ Problem's Category : Application Server Installation
 
                       Define the Tomcat Application Server for your project in Intellij.
                            Run the server. Now you JSP file should be executed and viewed in the browser at localhost:8080
+
+
+************************************************************************************************************
+
+************************************************************************************************************
+Problem's Category : JSP file can't compile the sources which include libraries like org.apache......Analyzer :
+    Solution :
+        I had to copy the libraries directory to _RI_/web/WEB-INF. so the web module WEB can recognize it.
+        This step had to be done because the web module let us specify the sources directory /src in our case, but
+        don't give the possibility to specify the libraries directory. So we have to know that it's cover range for
+        the import libraries ins project/web directory. not the hole project.

@@ -6,6 +6,12 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="_RI_" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/lucene_7.1.0/classification/lucene-classification-7.1.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/lucene_7.1.0/queryparser/lucene-queryparser-7.1.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/lucene_7.1.0/queries/lucene-queries-7.1.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/lucene_7.1.0/facet/lucene-facet-7.1.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/lucene_7.1.0/core/lucene-core-7.1.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/lucene_7.1.0/analysis/common/lucene-analyzers-common-7.1.0.jar" />
         </element>
       </element>
     </root>
