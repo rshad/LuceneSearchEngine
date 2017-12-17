@@ -1,7 +1,8 @@
 /*
-* @autor Rshad Zhran
-* Subject : Inormation Recovery, 2017-2018
-* */
+ * @autor Rshad Zhran
+ * Github Account : https://github.com/rshad
+ * LinkedIn Account : https://www.linkedin.com/in/rshad-zhran-b65b5012a/
+ */
 
 
 package I_Recovery;

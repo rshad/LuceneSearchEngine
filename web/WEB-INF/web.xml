@@ -6,12 +6,12 @@
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 
     <servlet>
-        <servlet-name>Servlet</servlet-name>
+        <servlet-name>SearchServlet</servlet-name>
         <servlet-class>I_Recovery.Servlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Servlet</servlet-name>
-        <url-pattern>/RI_Servlet</url-pattern>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/SearchServletURL</url-pattern> <!-- url-pattern gonna be used as reference to Servlet.jsp -->
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>

@@ -1,17 +1,16 @@
+/*
+ * @autor Rshad Zhran
+ * Github Account : https://github.com/rshad
+ * LinkedIn Account : https://www.linkedin.com/in/rshad-zhran-b65b5012a/
+ */
+
 package I_Recovery;
 
-import jdk.jfr.Category;
 import org.apache.lucene.queryparser.classic.ParseException;
-import org.jsoup.Jsoup;
 
-import javax.swing.text.Document;
-import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Set;
 
 public class Main {
     public static void main(String [ ] args) throws IOException, ParseException {

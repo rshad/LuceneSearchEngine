@@ -1,8 +1,8 @@
 <%--
-  Created by IntelliJ IDEA.
-  User: rshad
-  Date: 9/12/17
-  Time: 17:30
+  Author: Rshad Zhran
+  Github Account : https://github.com/rshad
+  LinkedIn Account : https://www.linkedin.com/in/rshad-zhran-b65b5012a/
+
   To change this template use File | Settings | File Templates.
 --%>
 
@@ -14,122 +14,94 @@
 <%@ page import="java.io.File" %>
 <%@ page import="java.util.ArrayList" %>
 
-<%
-    /*
-      String IndexDirPath = "/home/rshad/IdeaProjects/_RI_/Index";
-      String FacetsIndexDirPath ="/home/rshad/IdeaProjects/_RI_/facets";
-      ContentSearch SearchEngine = new ContentSearch(IndexDirPath);
-      ArrayList<String> result = SearchEngine.GeneralSearchQuery("defensor@ugr.es");
-    */
-%>
 
 <!doctype html>
 <html lang="en">
-<head>
-  <title>Hello, world!</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <head>
+    <title>Hello, world!</title>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <style>
+      * {box-sizing: border-box;}
 
+      body {margin:0;font-family:Arial;}
 
-  <style>
-    body {
-      padding-top: 50px;
-    }
-    .dropdown.dropdown-lg .dropdown-menu {
-      margin-top: -1px;
-      padding: 6px 20px;
-    }
-    .input-group-btn .btn-group {
-      display: flex !important;
-    }
-    .btn-group .btn {
-      border-radius: 0;
-      margin-left: -1px;
-    }
-    .btn-group .btn:last-child {
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
-    }
-    .btn-group .form-horizontal .btn[type="submit"] {
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
-    }
-    .form-horizontal .form-group {
-      margin-left: 0;
-      margin-right: 0;
-    }
-    .form-group .form-control:last-child {
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
-      width: 200px;
-    }
-    @media screen and (min-width: 768px) {
-      #adv-search {
-        width: 500px;
-        margin: 0 auto;
-      }
-      .dropdown.dropdown-lg {
-        position: static !important;
-      }
-      .dropdown.dropdown-lg .dropdown-menu {
-        min-width: 500px;
+      .topnav {
+        overflow: hidden;
+        background-color: #e9e9e9;
       }
 
-    }
+      .topnav a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
 
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
 
-  </style>
+      .topnav a.active {
+        background-color: #2196F3;
+        color: white;
+      }
 
-</head>
-<body class="mainBody">
+      .topnav .search-container {
+        float: right;
+      }
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="input-group" id="adv-search">
-        <input type="text" class="form-control" placeholder="Search for snippets" />
-        <div class="input-group-btn">
-          <div class="btn-group" role="group">
-            <div class="dropdown dropdown-lg">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
-              <div class="dropdown-menu dropdown-menu-right" role="menu">
-                <form class="form-horizontal" role="form">
-                  <div class="form-group">
-                    <label for="filter">Filter by</label>
-                    <select class="form-control">
-                      <option class="option_form" value="0" selected>All Snippets</option>
-                      <option class="option_form" value="1">Featured</option>
-                      <option class="option_form" value="2">Most popular</option>
-                      <option class="option_form" value="3">Top rated</option>
-                      <option class="option_form" value="4">Most commented</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="contain">Author</label>
-                    <input class="form-control" type="text" />
-                  </div>
-                  <div class="form-group">
-                    <label for="contain">Contains the words</label>
-                    <input class="form-control" type="text" />
-                  </div>
-                  <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                </form>
-              </div>
-            </div>
-            <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+      .topnav input[type=text]{
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+      }
 
-</body>
+      .topnav .search-container button {
+        float: right;
+        padding: 6px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: #ddd;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .topnav .search-container button:hover {
+        background: #ccc;
+      }
+
+      @media screen and (max-width: 600px) {
+        .topnav .search-container {
+          float: none;
+        }
+        .topnav a, .topnav input[type=text], .topnav .search-container button {
+          float: none;
+          display: block;
+          text-align: left;
+          width: 100%;
+          margin: 0;
+          padding: 14px;
+        }
+        .topnav input[type=text] {
+          border: 1px solid #ccc;
+        }
+      }
+    </style>
+
+  </head>
+  <body>
+
+      <form name="myForm" action="${pageContext.request.contextPath}/SearchServletURL" method="post">
+          <input type="text" placeholder="Search.." name="searchBox">
+          <button type="submit">Submit</button>
+      </form>
+
+  </body>
 </html>
+
