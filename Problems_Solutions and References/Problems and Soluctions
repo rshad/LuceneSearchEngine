@@ -33,3 +33,12 @@ Problem's Category : JSP file can't compile the sources which include libraries 
         This step had to be done because the web module let us specify the sources directory /src in our case, but
         don't give the possibility to specify the libraries directory. So we have to know that it's cover range for
         the import libraries ins project/web directory. not the hole project.
+
+************************************************************************************************************
+
+************************************************************************************************************
+
+Problem's Category : Accessing the Index directory from JSP file
+    Trying to access the index by the dynamic path gave errors of I/O exceptions; So executing the java code in
+    JSP file consider the Application server directory as the home directory for the project. So i changed it manually.
+

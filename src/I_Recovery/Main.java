@@ -22,7 +22,8 @@ public class Main {
        // example.createIndex("/home/rshad/MyFiles/RI/Documents");//( new File(".").getCanonicalPath() ) + "/" + "Documents");
 
         ContentSearch SearchEngine = new ContentSearch(IndexDirPath);
-        SearchEngine.GeneralSearchQuery("defensor@ugr.es");
+        ArrayList<String> result = SearchEngine.GeneralSearchQuery("defensor@ugr.es");
+        System.out.println(result.size());
 
 
     }

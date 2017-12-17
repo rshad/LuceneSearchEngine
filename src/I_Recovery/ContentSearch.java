@@ -78,8 +78,8 @@ public class ContentSearch{
      * GeneralSearchQuery throws a search query on each field of our index
      * @param Query represents the query body or text.
      */
-    public void GeneralSearchQuery(String Query) throws /*ParseException,*/ IOException {
-
+    public ArrayList<String> GeneralSearchQuery(String Query) throws /*ParseException,*/ IOException {
+        ArrayList<String> Result = new ArrayList<>();
         // Normal Query Which gonna search in the the query in the default field, in this case -> Content In this simple case
         try {
             q1=qParser.parse(String.valueOf(new FuzzyQuery(new Term("Email",Query),2 )));
@@ -90,8 +90,10 @@ public class ContentSearch{
 
         for(ScoreDoc sd : docs.scoreDocs){ //Getting the resulted documents
             org.apache.lucene.document.Document d = idx_Searcher.doc(sd.doc);
+            Result.add(sd.score +" Document : "+ d.get("Title"));
             System.out.println(sd.score +" Document : "+ d.get("Title"));
         }
+        return Result;
     }
 
     /**
