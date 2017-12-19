@@ -13,9 +13,7 @@ import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.index.*;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.queryparser.classic.QueryParser;
-import org.apache.lucene.queryparser.flexible.standard.CommonQueryParserConfiguration;
-import org.apache.lucene.queryparser.flexible.standard.CommonQueryParserConfiguration.*;
-import org.apache.lucene.queryparser.flexible.core.config.QueryConfigHandler;
+import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.*;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
@@ -27,6 +25,7 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.StringTokenizer;
 
 /*
  * Search UI Design :
@@ -39,30 +38,28 @@ import java.util.HashMap;
 /**
  * {@link ContentSearch} class, is responsible about the search function in our system
  * */
-public class ContentSearch{
+public class ContentSearch {
 
-        /* Class's members's definition */
+    /* Class's members's definition */
     private Directory dir;              // store the index directory
     private IndexReader idx_Reader;     // used to read the index
     private IndexSearcher idx_Searcher; // Once we got the index opened for lecture, we can create our IndexSearcher object
 
     /* Data Structures's Section Start  */
-    private ArrayList<Integer> ResultDocsID = new ArrayList<>();   // ResultDocsID will return the resulted documents's IDs
-    private HashMap<String,String > Field_Query = new HashMap<>(); // In case of determining the term or field of for the ...
-    /* Data Structures's Section End */                            // ... we store it in Field_Query.
+    private ArrayList<String> Result_Doc; // The resulted docs of a query search
+    /* Data Structures's Section End */
 
     /* Related variables to Lucene search Start */
     private QueryParser qParser; // Gonna be used in general non-field queries.
-    private Query q1;
+    private BooleanQuery bq;
+    private BooleanQuery.Builder boolQuery;
+    private Query MyQuery;
     private TopDocs docs; // The resulted docs of a query search
     private Integer ShownDocs = 10; // The number of doc.s to be view to the user
     /* Related variables to Lucene search End */
 
     /* Auxiliary variables */
-    String Query_Aux;
-    int i;
-
-
+    StringTokenizer QueryTokenizer;
     /**
       * Constructor
       * @param  Index_Dir_Path the index directory
@@ -76,46 +73,72 @@ public class ContentSearch{
     }
 
     /**
-     * GeneralSearchQuery throws a search query on each field of our index
-     * @param Query represents the query body or text.
+     * GlobalSearchQuery throws a search query on each field of our index
+     * @param QueryBody represents the query body or text.
      */
-    public ArrayList<String> GeneralSearchQuery(String Query) throws /*ParseException,*/ IOException {
-        ArrayList<String> Result = new ArrayList<>();
-        // Normal Query Which gonna search in the the query in the default field, in this case -> Content In this simple case
+    public ArrayList<String> GlobalSearchQuery(String QueryBody) throws IOException {
+    /* Filtering and Preparing variables and parameters Start */
+
+        this.Result_Doc = new ArrayList<>(); //Defining Result_Doc. Result will store the results of the query search
+        QueryBody = QueryBody.toLowerCase(); //Converting QueryBody to lowercase
+        this.QueryTokenizer = new StringTokenizer(QueryBody); //Creating a StringTokenizer object using QueryBody as parameter
+        this.boolQuery = new BooleanQuery.Builder(); //Defining boolQuery
+
+    /* Filtering and Preparing variables and parameters End */
+
+    /* Preparing the query Start */
+
+        while (QueryTokenizer.hasMoreElements()) {
+            this.boolQuery.add(new BooleanClause( new TermQuery( new Term( "Content", (String) QueryTokenizer.nextElement() ) ) ,
+                                                  BooleanClause.Occur.SHOULD
+                                                )
+                              );
+            this.boolQuery.add(new BooleanClause( new TermQuery( new Term( "Title", (String) QueryTokenizer.nextElement() ) )  ,
+                                                  BooleanClause.Occur.SHOULD
+                                                )
+                              );
+        }
+
         try {
-            q1=qParser.parse(String.valueOf(new FuzzyQuery(new Term("Email",Query),2 )));
+            /* BooleanQuery.Builder.build() return a BooleanQuery with the parameter passed to the BooleanQuery.Builder */
+            this.MyQuery = (this.qParser).parse(String.valueOf(boolQuery.build()));
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        docs = idx_Searcher.search(q1,ShownDocs); // Search query and show ShownDocs documents.
+    /* Preparing the query End */
+
+    /* Search for the query and getting the results Start */
+        docs = idx_Searcher.search(MyQuery,ShownDocs); // Search query and show ShownDocs documents.
 
         for(ScoreDoc sd : docs.scoreDocs){ //Getting the resulted documents
             org.apache.lucene.document.Document d = idx_Searcher.doc(sd.doc);
-            Result.add(sd.score +" Document : "+ d.get("Title"));
+            Result_Doc.add(sd.score +" Document : "+ d.get("Title"));
             System.out.println(sd.score +" Document : "+ d.get("Title"));
         }
-        return Result;
+    /* Search for the query and getting the results End */
+
+        return Result_Doc;
     }
 
     /**
-      * SpecifiedSearchQuery receive a String, which represents the query text, to be searched.
+      * FuzzyQueryFields will be used to search in non-tokenized fields, like Email in our case. Using FuzzyQuery
       * @param QueryBody The query text
+      * @param SpecifiedField represents the chosen field to search in
       */
-    public void SpecifiedSearchQuery(String QueryBody, ArrayList<String> Fields) throws ParseException, IOException {
+    public void FuzzyQueryFields(String QueryBody, String SpecifiedField) throws ParseException, IOException {
         QueryBody = QueryBody.toLowerCase();
-        Query_Aux = Fields.get(0)+":"+QueryBody;
 
-        for(int i=1; i<Fields.size(); i++){// Forming the query
-            Query_Aux += " OR "+Fields.get(i)+":"+QueryBody;
-        }
-
-        // Normal Query Which gonna search in the the query in the default field, in this case -> Content In this simple case
+        /*
+         * Note : QueryBody can't be null or empty string. This will lead to launch an exception and then stop the exec-
+         * ution process. In this case we will make the checkup, using JavaScript, so it'll be done in the Client side
+         * and not the Server side; That means faster execution process.
+         */
         try {
-            q1 = qParser.parse(Query_Aux); // Warning : Query can't be null or empty string
+            MyQuery=qParser.parse(String.valueOf((new FuzzyQuery(new Term(SpecifiedField,QueryBody),2 ))));
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        docs = idx_Searcher.search(q1,ShownDocs); // Search query and show ShownDocs documents.
+        docs = idx_Searcher.search(MyQuery,ShownDocs); // Search query and show ShownDocs documents.
 
         for(ScoreDoc sd : docs.scoreDocs){ //Getting the resulted documents
             org.apache.lucene.document.Document d = idx_Searcher.doc(sd.doc);

@@ -96,7 +96,7 @@
 
   </head>
   <body>
-
+      <%-- ${pageContext.request.contextPath} -> dynamic path --%>
       <form name="myForm" action="${pageContext.request.contextPath}/SearchServletURL" method="post">
           <input type="text" placeholder="Search.." name="searchBox">
           <button type="submit">Submit</button>

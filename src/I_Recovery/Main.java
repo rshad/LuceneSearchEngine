@@ -17,12 +17,11 @@ public class Main {
         String IndexDirPath = ( new File(".").getCanonicalPath() ) + "/" + "Index";
         String FacetsIndexDirPath = ( new File(".").getCanonicalPath() ) + "/" + "facets";
 
-       // IndexCreator example = new IndexCreator( IndexDirPath,FacetsIndexDirPath);
-       // example.createIndex("/home/rshad/MyFiles/RI/Documents");//( new File(".").getCanonicalPath() ) + "/" + "Documents");
+        //IndexCreator example = new IndexCreator( IndexDirPath,FacetsIndexDirPath);
+        //example.createIndex("/home/rshad/MyFiles/RI/Documents");//( new File(".").getCanonicalPath() ) + "/" + "Documents");
 
         ContentSearch SearchEngine = new ContentSearch(IndexDirPath);
-        ArrayList<String> result = SearchEngine.GeneralSearchQuery("defensor@ugr.es");
-        System.out.println(result.size());
+        ArrayList<String> result = SearchEngine.GlobalSearchQuery("Universidad de Granada");
 
 
     }
