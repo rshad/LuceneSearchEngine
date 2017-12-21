@@ -13,9 +13,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.RequestDispatcher;
+import java.io.File;
 import java.io.IOException;
 
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 
@@ -32,19 +34,11 @@ public class Servlet extends HttpServlet {
 
     private RequestDispatcher rd; //rd will direct the petition to a determined page
 
-    public Servlet(){}
-
-    /**
-     * Constructor
-     * @param indexPath represents MainIndexPath
-     * @param facetIndexPath represents FacetIndexPath
-     * @param Documents_Set_Path represents DocSetPath
-     * */
-    public Servlet(String indexPath, String facetIndexPath, String Documents_Set_Path) throws IOException {
+    public Servlet() throws IOException {
         /* Assigning the values of indexes and documents set variables */
-        this.MainIndexPath = indexPath;
-        this.FacetIndexPath = facetIndexPath;
-        this.DocSetPath = Documents_Set_Path;
+        this.MainIndexPath = ( new File(".").getCanonicalPath() ) + "/" + "Index";
+        this.FacetIndexPath = ( new File(".").getCanonicalPath() ) + "/" + "facets";
+        this.DocSetPath = "/home/rshad/IdeaProjects/_RI_/Documents";
 
         /*
          * 1) Assigning the indexes paths to our IndexCreator object class member
@@ -54,12 +48,19 @@ public class Servlet extends HttpServlet {
         this.myIndexCreator.createIndex(DocSetPath);
 
         /* Indicating the main index's path to our ContentSearch object class member */
-        this.mySearchCreator = new ContentSearch(MainIndexPath);
+        this.mySearchCreator = new ContentSearch(MainIndexPath,"");
 
         /* Defining the not null value for DocTitle_DocPath */
         this.DocTitle_DocPath = new HashMap<>();
-
     }
+
+    /**
+     * Constructor
+     * @param indexPath represents MainIndexPath
+     * @param facetIndexPath represents FacetIndexPath
+     * @param Documents_Set_Path represents DocSetPath
+     * */
+
 
     /**
      * processRequest represents the main function which receive/send data from/to the jsp files.
@@ -71,10 +72,13 @@ public class Servlet extends HttpServlet {
         try (PrintWriter output = response.getWriter()) {
             response.setContentType("text/html;charset=UTF-8"); /* Detemine the charset and file text type */
 
+            QueryText = request.getParameter("searchBox");
+            ArrayList<SearchResultObject> Document_Resulted = this.mySearchCreator.GlobalSearchQuery(QueryText);
             /* Obtaining the introduced query's text, in the search box of index.jsp */
-            QueryText = request.getParameter("searchBox").toString();
+
 
             request.setAttribute("QueryText",QueryText);
+            request.setAttribute("Document_Resulted",Document_Resulted);
 
             /*
              * 1) Assinging SearchResult.jsp as the redirected-to page

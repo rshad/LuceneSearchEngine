@@ -8,98 +8,102 @@
 
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="I_Recovery.IndexCreator"  %>
-<%@ page import="I_Recovery.ContentSearch" %>
-<%@ page import="java.io.File" %>
-<%@ page import="java.util.ArrayList" %>
 
 
 <!doctype html>
 <html lang="en">
   <head>
     <title>Hello, world!</title>
-
     <style>
-      * {box-sizing: border-box;}
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-      body {margin:0;font-family:Arial;}
-
-      .topnav {
-        overflow: hidden;
-        background-color: #e9e9e9;
-      }
-
-      .topnav a {
-        float: left;
-        display: block;
-        color: black;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-      }
-
-      .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-      }
-
-      .topnav a.active {
-        background-color: #2196F3;
-        color: white;
-      }
-
-      .topnav .search-container {
-        float: right;
-      }
-
-      .topnav input[type=text]{
-        padding: 6px;
-        margin-top: 8px;
-        font-size: 17px;
-        border: none;
-      }
-
-      .topnav .search-container button {
-        float: right;
-        padding: 6px;
-        margin-top: 8px;
-        margin-right: 16px;
-        background: #ddd;
-        font-size: 17px;
-        border: none;
-        cursor: pointer;
-      }
-
-      .topnav .search-container button:hover {
-        background: #ccc;
-      }
-
-      @media screen and (max-width: 600px) {
-        .topnav .search-container {
-          float: none;
+        body{
+            background: #f2f2f2;
         }
-        .topnav a, .topnav input[type=text], .topnav .search-container button {
-          float: none;
-          display: block;
-          text-align: left;
-          width: 100%;
-          margin: 0;
-          padding: 14px;
+
+        .search {
+            width: 100%;
+            position: relative
         }
-        .topnav input[type=text] {
-          border: 1px solid #ccc;
+
+        .searchTerm {
+            position:absolute;
+            float: left;
+            width: 100%;
+            border: 3px solid #00B4CC;
+            padding: 5px;
+            height: 20px;
+            border-radius: 5px;
+            outline: none;
+            color: #9DBFAF;
+            font-family:"Oswald";
+            font-size: 20px;
         }
-      }
+
+        .searchTerm:focus{
+            color: #00B4CC;
+        }
+        .FieldsSelect{
+            position: absolute;
+            right: -78px;
+            width: 130px;
+            height: 36px;
+            border: 1px solid #00B4CC;
+            background: #00B4CC;
+            text-align: center;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            font-family:"Oswald";
+        }
+        .searchButton {
+            position: absolute;
+            right: -120px;
+            width: 40px;
+            height: 36px;
+            border: 1px solid #00B4CC;
+            background: #00B4CC;
+            text-align: center;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /*Resize the wrap to see the search bar change!*/
+        .wrap{
+            width: 30%;
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+        }
     </style>
 
   </head>
   <body>
-      <%-- ${pageContext.request.contextPath} -> dynamic path --%>
-      <form name="myForm" action="${pageContext.request.contextPath}/SearchServletURL" method="post">
-          <input type="text" placeholder="Search.." name="searchBox">
-          <button type="submit">Submit</button>
-      </form>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald" />
+
+  <form class="wrap" name="myForm" action="${pageContext.request.contextPath}/SearchServletURL" method="post">
+      <div class="search">
+
+          <input type="text" class="searchTerm" placeholder="What are you looking for?" name="searchBox">
+
+          <select class="FieldsSelect">
+              <option value="Preselected">Select Field</option>
+              <option value="volvo">Field 1</option>
+              <option value="saab">Field 2</option>
+              <option value="mercedes">Field 3</option>
+              <option value="audi">Field 4</option>
+          </select>
+
+          <button type="submit" class="searchButton">
+              <i class="fa fa-search"></i>
+          </button>
+
+      </div>
+  </form>
 
   </body>
 </html>

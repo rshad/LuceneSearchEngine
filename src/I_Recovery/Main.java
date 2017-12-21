@@ -18,10 +18,11 @@ public class Main {
         String FacetsIndexDirPath = ( new File(".").getCanonicalPath() ) + "/" + "facets";
 
         //IndexCreator example = new IndexCreator( IndexDirPath,FacetsIndexDirPath);
-        //example.createIndex("/home/rshad/MyFiles/RI/Documents");//( new File(".").getCanonicalPath() ) + "/" + "Documents");
+        //example.createIndex("/home/rshad/IdeaProjects/_RI_/Documents");
 
-        ContentSearch SearchEngine = new ContentSearch(IndexDirPath);
-        ArrayList<String> result = SearchEngine.GlobalSearchQuery("Universidad de Granada");
+        ContentSearch SearchEngine = new ContentSearch(IndexDirPath,FacetsIndexDirPath);
+        //ArrayList<String> result = SearchEngine.GlobalSearchQuery("universidad de granada matricula 2017");
+        SearchEngine.GlobalSearchQuery("estudiantes");
 
 
     }

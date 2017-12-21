@@ -36,6 +36,7 @@ public class IndexCreator {
 
 /* Class member variables */
     private IndexWriter iwriter;
+    private DirectoryTaxonomyWriter taxoWriter;
     private FSDirectory index_dir; // Directory where the index will be stored
     private FSDirectory taxonomy_dir; // Directory where the Facets or Taxonomies index will be stored
     private ArrayList<File> files_to_index = new ArrayList<>();
@@ -114,7 +115,7 @@ public class IndexCreator {
         iwriter = new IndexWriter(index_dir, config);
 
         FacetsConfig facetConf = new FacetsConfig();
-        DirectoryTaxonomyWriter taxoWriter = new DirectoryTaxonomyWriter(taxonomy_dir);
+        taxoWriter = new DirectoryTaxonomyWriter(taxonomy_dir);
         facetConf.setHierarchical("pathCategory",true);
         facetConf.setMultiValued("lastMdoified",true);
 
@@ -138,7 +139,7 @@ public class IndexCreator {
 
                 // Adding the fields to the index document
                 doc.add(new TextField("Content", (FileFields).get_DocText() , Field.Store.YES ));
-                doc.add(new StringField("Path", f.getCanonicalPath().substring(46), Field.Store.YES)); //substring(46) -> to remove the local path
+                doc.add(new StringField("Path", (f.getCanonicalPath().substring(40,f.getCanonicalPath().length()-5)), Field.Store.YES)); //substring(46) -> to remove the local path
                 doc.add(new TextField("FileName", f.getName(), Field.Store.YES));
                 doc.add(new TextField("Title",(FileFields).get_DocTitle(), Field.Store.YES));
 
@@ -154,7 +155,7 @@ public class IndexCreator {
                                                     /* The Facets Section */
 
                 /* FACET : 1 ->  Divide the path of f "a file" into categories */
-                categories = f.getCanonicalPath().substring(46).split("/");
+                categories = f.getCanonicalPath().substring(40).split("/");
                 arguments = new String[categories.length]; //store the categories into arguments's array
                 argumentIndex=0;
                 for(String category : categories){ // storing the diiferent categories
@@ -186,10 +187,22 @@ public class IndexCreator {
         System.out.println("************************");
 
         files_to_index.clear();
+
+    /* This following part of code is so important, cause if we don't make commit() and close(), the index will not
+     * be well created, then it can't be used
+     */
         iwriter.commit();
         iwriter.close();
+        taxoWriter.commit();
+        taxoWriter.close();
 
     }
 
+    /**
+     * getFacetDirectory returns the facet directory. Gonna be used by ContentSearch class
+     */
+    protected FSDirectory getFacetDirectory(){
+        return this.taxonomy_dir;
+    }
 
 }
