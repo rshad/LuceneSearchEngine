@@ -29,8 +29,9 @@ public class Servlet extends HttpServlet {
     private IndexCreator myIndexCreator; // myIndexCreator gonna be used in case we want to create the index if it doesn't exist
     private ContentSearch mySearchCreator; // mySearchCreator gonna be used as the core for our search process
     private HashMap< String , Pair<String,String> > DocTitle_DocPath;// In DocTitle_DocPath we store the search result's docs. ..
-                                                                     // ... in pair (DocTitle , Pair<DocPath,DocHighlighting) form
+    private ArrayList<SearchResultObject> Document_Resulted = new ArrayList<>();                                                                 // ... in pair (DocTitle , Pair<DocPath,DocHighlighting) form
     private String QueryText = ""; // QueryText gonna store the introduced query
+    private String SelectedField="";
 
     private RequestDispatcher rd; //rd will direct the petition to a determined page
 
@@ -73,7 +74,17 @@ public class Servlet extends HttpServlet {
             response.setContentType("text/html;charset=UTF-8"); /* Detemine the charset and file text type */
 
             QueryText = request.getParameter("searchBox");
-            ArrayList<SearchResultObject> Document_Resulted = this.mySearchCreator.GlobalSearchQuery(QueryText);
+            SelectedField = request.getParameter("FieldToSelect");
+
+            System.out.println(SelectedField);
+
+            if (SelectedField.equals("None") ) {
+                Document_Resulted = this.mySearchCreator.GlobalSearchQuery(QueryText,"None");
+            }
+            else{
+                Document_Resulted = this.mySearchCreator.GlobalSearchQuery(QueryText,SelectedField);
+            }
+
             /* Obtaining the introduced query's text, in the search box of index.jsp */
 
 

@@ -8,7 +8,7 @@
 
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%@ page import="I_Recovery.LuceneDocConstants"%>
 
 <!doctype html>
 <html lang="en">
@@ -30,7 +30,7 @@
             position:absolute;
             float: left;
             width: 100%;
-            border: 3px solid #00B4CC;
+            border: 3px solid #003bff;
             padding: 5px;
             height: 20px;
             border-radius: 5px;
@@ -41,15 +41,15 @@
         }
 
         .searchTerm:focus{
-            color: #00B4CC;
+            color: #003bff;
         }
         .FieldsSelect{
             position: absolute;
             right: -78px;
             width: 130px;
             height: 36px;
-            border: 1px solid #00B4CC;
-            background: #00B4CC;
+            border: 1px solid #003bff;
+            background: #003bff;
             text-align: center;
             color: #fff;
             border-radius: 5px;
@@ -62,8 +62,8 @@
             right: -120px;
             width: 40px;
             height: 36px;
-            border: 1px solid #00B4CC;
-            background: #00B4CC;
+            border: 1px solid #003bff;
+            background: #003bff;
             text-align: center;
             color: #fff;
             border-radius: 5px;
@@ -90,12 +90,12 @@
 
           <input type="text" class="searchTerm" placeholder="What are you looking for?" name="searchBox">
 
-          <select class="FieldsSelect">
-              <option value="Preselected">Select Field</option>
-              <option value="volvo">Field 1</option>
-              <option value="saab">Field 2</option>
-              <option value="mercedes">Field 3</option>
-              <option value="audi">Field 4</option>
+          <select class="FieldsSelect" name="FieldToSelect">
+              <option class="SelectedField" value="None" selected="selected">Select Field</option>
+              <option class="SelectedField" value=<%=LuceneDocConstants.Field_1%>><%=LuceneDocConstants.Field_1%></option>
+              <option class="SelectedField" value=<%=LuceneDocConstants.Field_2%>><%=LuceneDocConstants.Field_2%></option>
+              <option class="SelectedField" value=<%=LuceneDocConstants.Field_2%>><%=LuceneDocConstants.Field_3%></option>
+
           </select>
 
           <button type="submit" class="searchButton">

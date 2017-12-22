@@ -79,10 +79,12 @@ public class ContentSearch {
                                                                        // ... SpanishAnalyzer the default Analyzer
     }
 
-    private Query GenerateGeneralQuery(String QueryBody){
+    /**
+     * GenerateGeneralQuery is used to generate the query which will be used in the search process.
+     * @param QueryBody the query's text
+     * */
+    private Query GenerateGeneralQuery(String QueryBody, String SelectedField){
         /* Filtering and Preparing variables and parameters Start */
-
-        this.Result_Doc = new ArrayList<>(); //Defining Result_Doc. Result will store the results of the query search
         QueryBody = QueryBody.toLowerCase(); //Converting QueryBody to lowercase
         this.QueryTokenizer = new StringTokenizer(QueryBody); //Creating a StringTokenizer object using QueryBody as parameter
         this.boolQuery = new BooleanQuery.Builder(); //Defining boolQuery
@@ -99,24 +101,33 @@ public class ContentSearch {
              * and in this case can give us NoElementException or some thing like that.
              */
             this.nextElement = (String) QueryTokenizer.nextElement();
-            this.boolQuery.add(new BooleanClause( new TermQuery( new Term( "Content", nextElement ) ) ,
-                            BooleanClause.Occur.SHOULD //SHOULD is equivalent to OR operator
-                    )
-            );
-            this.boolQuery.add(new BooleanClause( new TermQuery( new Term( "Title", nextElement ) )  ,
-                            BooleanClause.Occur.SHOULD
-                    )
-            );
+
+            if( ( SelectedField.equals("None") ) || ( !(SelectedField.equals("None")) && SelectedField.equals("Content") ) ) {
+                this.boolQuery.add(new BooleanClause(new TermQuery(new Term("Content", nextElement)),
+                                BooleanClause.Occur.SHOULD //SHOULD is equivalent to OR operator
+                        )
+                );
+            }
+
+            if( ( SelectedField.equals("None") ) || ( !(SelectedField.equals("None")) && SelectedField.equals("Title") ) ) {
+                this.boolQuery.add(new BooleanClause(new TermQuery(new Term("Title", nextElement)),
+                                BooleanClause.Occur.SHOULD
+                        )
+                );
+            }
+
+
             /*
              * to search in Email field, i use FuzzyQuery to get better results; Because when a user search for an email,
              * sometimes He/She doesn't know the exact correct email, which requires providing him the possibility of
              * introducing Almost-Correct emails.
              */
-            this.boolQuery.add(new BooleanClause( new FuzzyQuery(new Term("Email", nextElement ),2 )  ,
-                            BooleanClause.Occur.SHOULD
-                    )
-            );
-
+            if( ( SelectedField.equals("None") ) || ( !(SelectedField.equals("None")) && SelectedField.equals("Email") ) ) {
+                this.boolQuery.add(new BooleanClause(new FuzzyQuery(new Term("Email", nextElement), 2),
+                                BooleanClause.Occur.SHOULD
+                        )
+                );
+            }
         }
 
         try {
@@ -135,9 +146,9 @@ public class ContentSearch {
      * GlobalSearchQuery throws a search query on each field of our index
      * @param QueryBody represents the query body or text.
      */
-    public ArrayList<SearchResultObject> GlobalSearchQuery(String QueryBody) throws IOException {
+    public ArrayList<SearchResultObject> GlobalSearchQuery(String QueryBody,String SelectedField) throws IOException {
         this.Doc_Result_Obj = new SearchResultObject();
-        this.GenerateGeneralQuery(QueryBody);
+        this.GenerateGeneralQuery(QueryBody,SelectedField); // Generating the query to be searched
     /* Search for the query and getting the results Start */
         docs = idx_Searcher.search(MyQuery,ShownDocs); // Search query and show ShownDocs documents.
 
@@ -153,6 +164,16 @@ public class ContentSearch {
         return Result_Doc;
     }
 
+
+    public void SelectedFieldSearch(String QueryBody, String SelectedField){
+        this.Doc_Result_Obj = new SearchResultObject();
+        QueryBody = QueryBody.toLowerCase(); //Converting QueryBody to lowercase
+
+
+
+
+
+    }
 
 
     /**
@@ -186,11 +207,11 @@ public class ContentSearch {
      * @param Facet the introduced facet to be employed in the search process
      * @param QueryBody the query's text
      */
-    public void FacetQuerySearch(String Facet, String QueryBody) throws IOException, ParseException, NullPointerException {
+    public void FacetQuerySearch(String Facet, String QueryBody,String SelectedField) throws IOException, ParseException, NullPointerException {
         DirectoryTaxonomyReader FacetDirectroryReader = new DirectoryTaxonomyReader(this.FacetsDirectory);
         FacetsConfig fconfig = new FacetsConfig();
         FacetsCollector facetsCollector = new FacetsCollector();
-        this.GenerateGeneralQuery(QueryBody);
+        this.GenerateGeneralQuery(QueryBody,SelectedField);
         facetsCollector.search(idx_Searcher, this.MyQuery, 10, facetsCollector);
         Facets facets = new FastTaxonomyFacetCounts(FacetDirectroryReader, fconfig, facetsCollector);
         FacetResult facetResult = facets.getTopChildren(10, "pathCategory","www.ugr.es","estudiantes");

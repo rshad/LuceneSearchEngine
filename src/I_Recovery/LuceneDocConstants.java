@@ -11,5 +11,8 @@ public class LuceneDocConstants {
     public static final String CATEGORY = "Category_Related_Docs";
     public static final String INDEX_DIRECTORY = "";
     public static final String INDEX_NAME = "UGR_INDEX";
+    public static final String Field_1 = "Title";
+    public static final String Field_2 = "Content";
+    public static final String Field_3 = "Email";
 
 }

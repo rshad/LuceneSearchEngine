@@ -22,7 +22,7 @@ public class Main {
 
         ContentSearch SearchEngine = new ContentSearch(IndexDirPath,FacetsIndexDirPath);
         //ArrayList<String> result = SearchEngine.GlobalSearchQuery("universidad de granada matricula 2017");
-        SearchEngine.GlobalSearchQuery("estudiantes");
+        SearchEngine.GlobalSearchQuery("estudiantes","None");
 
 
     }
