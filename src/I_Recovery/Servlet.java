@@ -7,6 +7,8 @@
 package I_Recovery;
 
 import javafx.util.Pair;
+import org.apache.lucene.queryparser.classic.ParseException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,6 +34,9 @@ public class Servlet extends HttpServlet {
     private ArrayList<SearchResultObject> Document_Resulted = new ArrayList<>();                                                                 // ... in pair (DocTitle , Pair<DocPath,DocHighlighting) form
     private String QueryText = ""; // QueryText gonna store the introduced query
     private String SelectedField="";
+    private String SelectedCat="";
+    private ArrayList<String> categories = new ArrayList<>();
+
 
     private RequestDispatcher rd; //rd will direct the petition to a determined page
 
@@ -45,14 +50,15 @@ public class Servlet extends HttpServlet {
          * 1) Assigning the indexes paths to our IndexCreator object class member
          * 2) Creating the index on our documents set
          */
-        this.myIndexCreator = new IndexCreator(MainIndexPath,FacetIndexPath);
-        this.myIndexCreator.createIndex(DocSetPath);
+        //this.myIndexCreator = new IndexCreator(MainIndexPath,FacetIndexPath);
+        //this.myIndexCreator.createIndex(DocSetPath);
 
         /* Indicating the main index's path to our ContentSearch object class member */
-        this.mySearchCreator = new ContentSearch(MainIndexPath,"");
+        this.mySearchCreator = new ContentSearch(MainIndexPath,FacetIndexPath);
 
         /* Defining the not null value for DocTitle_DocPath */
         this.DocTitle_DocPath = new HashMap<>();
+
     }
 
     /**
@@ -68,46 +74,57 @@ public class Servlet extends HttpServlet {
      * @param request represents  output of doGet(...) function
      * @param response represents the input of doPost(...) function
      * */
-    public void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException{
+    public void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, ParseException {
+        String Query_Aux = "";
+        PrintWriter output = response.getWriter();
+        response.setContentType("text/html;charset=UTF-8"); /* Detemine the charset and file text type */
 
-        try (PrintWriter output = response.getWriter()) {
-            response.setContentType("text/html;charset=UTF-8"); /* Detemine the charset and file text type */
+        if(request.getParameter("searchBox") != null) {
+            this.QueryText = request.getParameter("searchBox");
+        }
 
-            QueryText = request.getParameter("searchBox");
-            SelectedField = request.getParameter("FieldToSelect");
+        SelectedField = request.getParameter("FieldToSelect");
+        SelectedCat = request.getParameter("CatToSelect");
 
-            System.out.println(SelectedField);
-
-            if (SelectedField.equals("None") ) {
-                Document_Resulted = this.mySearchCreator.GlobalSearchQuery(QueryText,"None");
-            }
-            else{
-                Document_Resulted = this.mySearchCreator.GlobalSearchQuery(QueryText,SelectedField);
-            }
-
-            /* Obtaining the introduced query's text, in the search box of index.jsp */
+        if(request.getParameter("CatToSelect") != null) {
+            Document_Resulted = this.mySearchCreator.FacetQuerySearch(SelectedCat, QueryText, "None");
+        }
+        else{
+            Document_Resulted = this.mySearchCreator.GlobalSearchQuery(QueryText, SelectedField);
+        }
 
 
-            request.setAttribute("QueryText",QueryText);
-            request.setAttribute("Document_Resulted",Document_Resulted);
+        /* Obtaining the introduced query's text, in the search box of index.jsp */
 
-            /*
-             * 1) Assinging SearchResult.jsp as the redirected-to page
-             * 2) Send the petition
-             */
-            rd = getServletContext().getRequestDispatcher("/SearchResult.jsp");
-            rd.forward(request, response);
 
-        } catch (ServletException e) {
+
+        request.setAttribute("QueryText", QueryText);
+        request.setAttribute("Document_Resulted", Document_Resulted);
+
+        /*
+         * 1) Assinging SearchResult.jsp as the redirected-to page
+         * 2) Send the petition
+         */
+        rd = getServletContext().getRequestDispatcher("/SearchResult.jsp");
+        rd.forward(request, response);
+
+
+
+    }
+
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        try {
+            processRequest(request, response);
+        } catch (ParseException e) {
             e.printStackTrace();
         }
     }
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        processRequest(request, response);
-    }
-
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        processRequest(request, response);
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        try {
+            processRequest(request, response);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 }

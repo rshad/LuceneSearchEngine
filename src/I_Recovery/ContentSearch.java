@@ -147,6 +147,7 @@ public class ContentSearch {
      * @param QueryBody represents the query body or text.
      */
     public ArrayList<SearchResultObject> GlobalSearchQuery(String QueryBody,String SelectedField) throws IOException {
+        System.out.print("Inside");
         this.Doc_Result_Obj = new SearchResultObject();
         this.GenerateGeneralQuery(QueryBody,SelectedField); // Generating the query to be searched
     /* Search for the query and getting the results Start */
@@ -154,9 +155,10 @@ public class ContentSearch {
 
         for(ScoreDoc sd : docs.scoreDocs){ //Getting the resulted documents
             org.apache.lucene.document.Document d = idx_Searcher.doc(sd.doc);
+
             this.Doc_Result_Obj = new SearchResultObject();
-            Doc_Result_Obj.set(d.get("Title"),d.get("Path"), "",Float.toString(sd.score));
-            Result_Doc.add(Doc_Result_Obj);
+            this.Doc_Result_Obj.set(d.get("Title"),d.get("Path"), "");
+            this.Result_Doc.add(Doc_Result_Obj);
         }
 
     /* Search for the query and getting the results End */
@@ -165,23 +167,13 @@ public class ContentSearch {
     }
 
 
-    public void SelectedFieldSearch(String QueryBody, String SelectedField){
-        this.Doc_Result_Obj = new SearchResultObject();
-        QueryBody = QueryBody.toLowerCase(); //Converting QueryBody to lowercase
-
-
-
-
-
-    }
-
 
     /**
       * FuzzyQueryFields will be used to search in non-tokenized fields, like Email in our case. Using FuzzyQuery
       * @param QueryBody The query text
       * @param SpecifiedField represents the chosen field to search in
       */
-    public void FuzzyQueryFields(String QueryBody, String SpecifiedField) throws ParseException, IOException {
+    public void FuzzyQueryFields(String QueryBody, String SpecifiedField) throws IOException {
         QueryBody = QueryBody.toLowerCase();
 
         /*
@@ -207,19 +199,27 @@ public class ContentSearch {
      * @param Facet the introduced facet to be employed in the search process
      * @param QueryBody the query's text
      */
-    public void FacetQuerySearch(String Facet, String QueryBody,String SelectedField) throws IOException, ParseException, NullPointerException {
+    public ArrayList<SearchResultObject> FacetQuerySearch(String Facet, String QueryBody,String SelectedField) throws IOException, ParseException, NullPointerException {
+
         DirectoryTaxonomyReader FacetDirectroryReader = new DirectoryTaxonomyReader(this.FacetsDirectory);
+        System.out.println(QueryBody);
+
         FacetsConfig fconfig = new FacetsConfig();
         FacetsCollector facetsCollector = new FacetsCollector();
         this.GenerateGeneralQuery(QueryBody,SelectedField);
-        facetsCollector.search(idx_Searcher, this.MyQuery, 10, facetsCollector);
+
+        FacetsCollector.search(idx_Searcher, this.MyQuery, 20, facetsCollector);
         Facets facets = new FastTaxonomyFacetCounts(FacetDirectroryReader, fconfig, facetsCollector);
-        FacetResult facetResult = facets.getTopChildren(10, "pathCategory","www.ugr.es","estudiantes");
-        System.out.println(facetResult.path.length);
+
+        FacetResult facetResult = facets.getTopChildren(10, "pathCategory","www.ugr.es","estudiantes",Facet);
         try {
             for (LabelAndValue labelAndValue : facetResult.labelValues) {
-                System.out.println(labelAndValue.label + ":" +
-                        labelAndValue.value);
+                System.out.println(labelAndValue.label + " = " + labelAndValue.value);
+
+                this.Doc_Result_Obj = new SearchResultObject();
+                this.Doc_Result_Obj.set(labelAndValue.label.substring(0,labelAndValue.label.length()-5),"www.ugr.es/estudiantes/"+Facet+labelAndValue.label, "");
+                this.Result_Doc.add(Doc_Result_Obj);
+
             }
         }catch (NullPointerException e){
             System.out.println("No Documents Found");
@@ -233,6 +233,7 @@ public class ContentSearch {
             System.out.println("No Documents Found");
         }
 
+        return Result_Doc;
     }
 
 

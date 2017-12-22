@@ -91,7 +91,7 @@
           <input type="text" class="searchTerm" placeholder="What are you looking for?" name="searchBox">
 
           <select class="FieldsSelect" name="FieldToSelect">
-              <option class="SelectedField" value="None" selected="selected">Select Field</option>
+              <option class="SelectedField" value="None" selected="selected">All Fields</option>
               <option class="SelectedField" value=<%=LuceneDocConstants.Field_1%>><%=LuceneDocConstants.Field_1%></option>
               <option class="SelectedField" value=<%=LuceneDocConstants.Field_2%>><%=LuceneDocConstants.Field_2%></option>
               <option class="SelectedField" value=<%=LuceneDocConstants.Field_2%>><%=LuceneDocConstants.Field_3%></option>

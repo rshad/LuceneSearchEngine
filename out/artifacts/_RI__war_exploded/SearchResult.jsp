@@ -13,6 +13,7 @@
 
 <% ArrayList<SearchResultObject> Document_Result = (ArrayList<SearchResultObject>) request.getAttribute("Document_Resulted"); %>
 <% String QueryValue = (String)request.getAttribute("QueryText");%>
+<% String Query_Text = (String) request.getAttribute("QueryText"); %>
 
 <html>
 <head>
@@ -328,6 +329,7 @@
         }
 
         .search-results h2 a{
+            width:80%;
             text-decoration: none;
             color: rgb(26, 13, 171);
             font-weight: normal;
@@ -345,12 +347,6 @@
         .summary {
             color: #545454;
             font-size: 13px;
-        }
-
-        .related-searches {
-            border-top: 1px solid rgb(235, 235, 235);
-            border-bottom: 1px solid rgb(235, 235, 235);
-            height: 155px;
         }
 
         .related-searches h3 {
@@ -420,6 +416,38 @@
             margin-bottom: 0px;
             padding-left: 27px;
         }
+        .categories_table{
+            width: 400px;
+            display: inline-flex;
+            margin-right: -500px;
+            float: right;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        .numberOfdoc{
+            width: 50%;
+        }
+        .numberOfdoc th{
+            border: 0px;
+        }
+        .submitCategory{
+            width: 100px;
+            height: 36px;
+            border: 1px solid #003bff;
+            background: #003bff;
+            text-align: center;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            font-family: Oswald;
+        }
+        .submitCategoryTH{
+            border: 0px;
+        }
 
     </style>
     <title>Title</title>
@@ -436,7 +464,7 @@
                     <input type="text" class="searchTerm" placeholder="What are you looking for?" name="searchBox">
 
                     <select class="FieldsSelect" name="FieldToSelect">
-                        <option class="SelectedField" value="None" selected="selected">Select Field</option>
+                        <option class="SelectedField" value="None" selected="selected">All Fields</option>
                         <option class="SelectedField" value=<%=LuceneDocConstants.Field_1%>><%=LuceneDocConstants.Field_1%></option>
                         <option class="SelectedField" value=<%=LuceneDocConstants.Field_2%>><%=LuceneDocConstants.Field_2%></option>
                         <option class="SelectedField" value=<%=LuceneDocConstants.Field_2%>><%=LuceneDocConstants.Field_3%></option>
@@ -450,23 +478,57 @@
             </form>
         </div>
         <div class="results">
-        <% for( SearchResultObject document_details : Document_Result ){ %>
-            <div class="search-results">
-                <h2><a target="_blank" href=http://<%=document_details.get_Doc_Path()%> class="docName"><%=document_details.get_Doc_Title()%></a></h2>
-                <p><a target="_blank" href=http://<%=document_details.get_Doc_Path()%> class="link"><%=document_details.get_Doc_Path()%></a><p>
-                <p class="summary">Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</p>
-            </div>
-        <%}%>
-            <div class="related-searches">
-                <h3>Searches related to ipsum lorem</h3>
-                <table>
+
+            <table class="categories_table">
+                <tr>
+                    <th>Category</th>
+                </tr>
+                <form action="${pageContext.request.contextPath}/SearchServletURL" method="post">
                     <tr>
-                        <td><a href="#">ipsum lorem <strong>generator</strong></a></td>
-                        <td><a href="#">ipsum lorem <strong>hipster</strong></a></td>
+                        <th>
+                            <input type="radio" name="CatToSelect" value="none" checked>No Facets<br>
+                        </th>
                     </tr>
-                </table>
-            </div>
+                    <tr>
+                        <th>
+                            <input type="radio" name="CatToSelect" value="estudiantes">estudiantes<br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <input type="radio" name="CatToSelect" value="grados">grados<br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <input type="radio" name="CatToSelect" value="becas-y-ayudas">becas-y-ayudas<br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <input type="radio" name="CatToSelect" value="movilidad-e-intercambio">movilidad-e-intercambio<br>
+                        </th>
+
+                    <tr>
+                        <th class="submitCategoryTH">
+                            <input type="submit" class="submitCategory" value="Submit">
+                        </th>
+                    </tr>
+                </form>
+            </table>
+
+
+            <% for( SearchResultObject document_details : Document_Result ){ %>
+                <div class="search-results">
+                    <h2><a target="_blank" href=http://<%=document_details.get_Doc_Path()%> class="docName"><%=document_details.get_Doc_Title()%></a></h2>
+                    <p><a target="_blank" href=http://<%=document_details.get_Doc_Path()%> class="link"><%=document_details.get_Doc_Path()%></a><p>
+                    <p class="summary">Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</p>
+                </div>
+            <%}%>
+
         </div>
+
+
         <div class="footer">
             <div id="location"></div><p>Tysons, VA - From your Internet address - <span id="location-search">Use precise location - Learn more</span></p>
             <ul>
