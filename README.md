@@ -23,6 +23,6 @@
   
  
 #### Project Structure
-In src directory, you can find the application main code files " the hole aplication without the interface code files ".
-In web directory, you can find the total files, related to the user interface and the server configuration.
-In Problems_Solutions and References, you can find the coding problems and bugs I faced during the implementation of the application with the solutions "how I resolved the bugs".
+- In src directory, you can find the application main code files " the hole aplication without the interface code files ".
+- In web directory, you can find the total files, related to the user interface and the server configuration.
+- In Problems_Solutions and References, you can find the coding problems and bugs I faced during the implementation of the application with the solutions "how I resolved the bugs".
